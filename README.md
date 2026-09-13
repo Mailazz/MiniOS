@@ -1,4 +1,4 @@
-# MiniOS — Operating System & CPU Scheduling Simulator
+# MiniOS - Operating System & CPU Scheduling Simulator
 
 A C++ simulator implementing core operating-system concepts: process management (via a Process Control Block model) and four CPU scheduling algorithms, with performance evaluation across waiting time, turnaround time, and response time.
 
@@ -13,14 +13,14 @@ Each process is modeled with a PCB (`Process` struct) holding arrival time, burs
 - **Round Robin** — preemptive, time-quantum based (default quantum = 3).
 
 ### Metrics computed
-- **Waiting time** — time a process spends ready but not running.
-- **Turnaround time** — total time from arrival to completion.
-- **Response time** — time from arrival to first getting the CPU.
+- **Waiting time** time a process spends ready but not running.
+- **Turnaround time**  total time from arrival to completion.
+- **Response time**  time from arrival to first getting the CPU.
 
 ## Sample output
 
 ```
-=== Shortest Job First (SJF) ===
+ Shortest Job First (SJF) 
 PID   Arrival   Burst   Completion  Waiting   Turnaround  Response
 1     0         8       8           0         8           0
 2     1         4       14          9         13          9
@@ -33,7 +33,7 @@ Avg Turnaround Time: 13.80
 Avg Response Time:   8.20
 ```
 
-Running all four algorithms on the same workload shows the expected trade-offs: SJF minimizes average waiting/turnaround time, while Round Robin gives the best (lowest) average response time at the cost of higher waiting time — exactly the trade-off scheduling theory predicts.
+Running all four algorithms on the same workload shows the expected trade-offs: SJF minimizes average waiting/turnaround time, while Round Robin gives the best (lowest) average response time at the cost of higher waiting time, exactly the trade-off scheduling theory predicts.
 
 ## Build & run
 
@@ -67,8 +67,8 @@ MiniOS/
 
 This currently covers process management and CPU scheduling (Phases 1–2 of the original plan). Planned next:
 - **Memory management**: paging simulation with FIFO and LRU page-replacement algorithms.
-- **Synchronization**: producer–consumer problem using mutexes and threads.
+- **Synchronization**: producer-consumer problem using mutexes and threads.
 
 ## Why I built this
 
-I wanted to move past *using* cloud/DevOps tools and actually understand the operating-system fundamentals underneath them — how scheduling decisions affect real performance metrics, not just in theory but in measurable output.
+I wanted to move past *using* cloud/DevOps tools and actually understand the operating-system fundamentals underneath them, how scheduling decisions affect real performance metrics, not just in theory but in measurable output.
