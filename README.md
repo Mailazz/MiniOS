@@ -1,4 +1,4 @@
-# MiniOS — Operating System & CPU Scheduling Simulator
+# MiniOS - Operating System & CPU Scheduling Simulator
 
 ![C++ Standard](https://img.shields.io/badge/c%2B%2B-17-blue.svg)
 ![Docker Ready](https://img.shields.io/badge/docker-ready-blue.svg)
