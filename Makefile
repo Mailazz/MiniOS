@@ -1,6 +1,13 @@
 CXX = g++
-CXXFLAGS = -std=c++17 -Wall
-SRC = src/main.cpp src/scheduler.cpp src/process.cpp
+
+CXXFLAGS = -std=c++17 -Wall -Wextra -Iinclude
+
+SRC = \
+	src/main.cpp \
+	src/scheduler.cpp \
+	src/process.cpp \
+	src/memory/paging.cpp
+
 TARGET = minios
 
 all: $(TARGET)
